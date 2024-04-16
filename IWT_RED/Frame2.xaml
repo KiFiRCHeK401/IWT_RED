@@ -20,7 +20,7 @@
             <ColumnDefinition ></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Image VerticalAlignment="Stretch" Width="auto" Height="auto"  HorizontalAlignment="Left" Margin="0,0,0,0"   Panel.ZIndex="3" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Source="/Frame2.png"/>
+        <Image  HorizontalAlignment="Left"   Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Source="/Frame2.png"/>
 
         <StackPanel Width="693" Height="841" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1">
             
@@ -41,9 +41,11 @@
                         <GradientStop Color="#FF232323" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
-                <TextBox FontStyle="Italic" FontSize="24" FontFamily="Montserrat" Foreground="Gray" VerticalAlignment="Bottom" x:Name="TB1" Height="50"  Background="Transparent" BorderBrush="Black">
-                    Фамилия, имя, отчество  <!--Не понял как сделать placeHolder-->
-                </TextBox> 
+                <Grid>
+
+                    <TextBox Panel.ZIndex="2" TextChanged="txtChng" FontStyle="Italic" FontSize="24" FontFamily="Montserrat" Foreground="Gray" VerticalAlignment="Bottom" x:Name="TB1" Height="50"  Background="Transparent" BorderBrush="Black"/>
+                    <TextBlock Panel.ZIndex="1" Name="placeHolder1" VerticalAlignment="Bottom" FontStyle="Italic" FontSize="24" FontFamily="Montserrat" Foreground="Gray" Height="50">Фамилия, имя, отчество</TextBlock>
+                </Grid>
             </Border>
             
             
@@ -55,7 +57,10 @@
                         <GradientStop Color="#FF232323" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
-                <TextBox FontStyle="Italic"   FontSize="24" FontFamily="Montserrat" Foreground="Gray" VerticalAlignment="Bottom" x:Name="TB2" Height="50" Background="Transparent" BorderBrush="Black">Ваш телефон</TextBox>
+                <Grid>
+                    <TextBox Panel.ZIndex="2" TextChanged="txtChng" FontStyle="Italic"   FontSize="24" FontFamily="Montserrat" Foreground="Gray" VerticalAlignment="Bottom" x:Name="TB2" Height="50" Background="Transparent" BorderBrush="Black"/>
+                    <TextBlock Panel.ZIndex="1" Name="placeHolder2" VerticalAlignment="Bottom" FontStyle="Italic" FontSize="24" FontFamily="Montserrat" Foreground="Gray" Height="50">Ваш телефон</TextBlock>
+                </Grid>
             </Border>
             
             
@@ -67,7 +72,10 @@
                         <GradientStop Color="#FF232323" Offset="1"/>
                     </LinearGradientBrush>
                 </Border.Background>
-                <TextBox FontStyle="Italic"   FontSize="24" FontFamily="Montserrat" Foreground="Gray" VerticalAlignment="Bottom" x:Name="TB3" Height="50" Background="Transparent" BorderBrush="Black">E-mail</TextBox>
+                <Grid>
+                    <TextBox Panel.ZIndex="2" TextChanged="txtChng" FontStyle="Italic"   FontSize="24" FontFamily="Montserrat" Foreground="Gray" VerticalAlignment="Bottom" x:Name="TB3" Height="50" Background="Transparent" BorderBrush="Black"/>
+                    <TextBlock Panel.ZIndex="1" Name="placeHolder3" VerticalAlignment="Bottom" FontStyle="Italic" FontSize="24" FontFamily="Montserrat" Foreground="Gray" Height="50">E-mail</TextBlock>
+                </Grid>
             </Border>
             
             <Border MinHeight="100">
@@ -76,7 +84,8 @@
             
             
             
-            <Border Width="693px" Height="122px" Background="#FBB911" Mouse.MouseDown="AcceptFrame2"  VerticalAlignment="Bottom" HorizontalAlignment="Center">
+            <Border Name="button" MouseEnter="focusOn" MouseLeave="focusOut" Width="693px" Height="122px" Background="#FBB911" Mouse.MouseUp="AcceptFrame2"  VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                
                 <TextBlock TextAlignment="Center" VerticalAlignment="Center" FontWeight="Bold"  FontSize="32" Foreground="Black"> Подтвердить данные</TextBlock>
             </Border>
         </StackPanel>

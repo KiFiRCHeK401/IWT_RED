@@ -23,6 +23,7 @@ namespace IWT_RED
         public Frame1()
         {
             InitializeComponent();
+
         }
 
         private void ClickOnFrame1(object sender, MouseButtonEventArgs e)

@@ -23,8 +23,17 @@ namespace IWT_RED
         public MainWindow()
         {
             InitializeComponent();
+
             frame.Navigate(new Frame1());
             
+        }
+
+        private void keyDownAllFrame(object sender, KeyEventArgs e)
+        {
+            if(e.Key == Key.Escape) 
+            {
+                this.Close();
+            }
         }
 
 

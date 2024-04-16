@@ -11,14 +11,10 @@
         
         MinHeight="1080"
         MinWidth="1920" d:DesignHeight="1092" d:DesignWidth="1920">
-    
-    
-    <Grid>
-
-        <Frame x:Name="frame" Content="Frame"/>
 
 
-
+    <Grid Name="GridMain" Keyboard.KeyDown="keyDownAllFrame">
+        <Frame x:Name="frame" Content="Frame" NavigationUIVisibility="Hidden"/>
     </Grid>
 
 </Window>

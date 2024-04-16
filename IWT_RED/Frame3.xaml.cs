@@ -62,9 +62,6 @@ namespace IWT_RED
 
         private void TextChanged1(object sender, TextChangedEventArgs e)
         {
-
-
-
             if (TB4.Text != "")
             {
                 TB5.Focus();
