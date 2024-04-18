@@ -61,7 +61,7 @@ namespace IWT_RED {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/IWT_RED;component/frame4.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/IWT_RED;V1.0.0.0;component/frame4.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Frame4.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

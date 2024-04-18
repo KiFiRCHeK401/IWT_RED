@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Users\artur\OneDrive\Save\Documents\Работа\IWT_RED\IWT_RED\App.xaml
-528986717
+7404157797
 
-9-2137873014
+101332733532
 194-2067936865
-Frame1.xaml;Frame2.xaml;Frame3.xaml;Frame4.xaml;MainWindow.xaml;
+Resources\Styles\MainStyles.xaml;Resources\Templates\BtnTemplate1.xaml;Views\Pages\Frame1.xaml;Views\Pages\Frame2.xaml;Views\Pages\Frame3.xaml;Views\Pages\Frame4.xaml;Views\Windows\MainWindow.xaml;
 
-False
+True
 

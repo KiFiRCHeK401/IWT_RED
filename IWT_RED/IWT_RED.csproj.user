@@ -7,33 +7,42 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Frame1.xaml.cs">
+    <Compile Update="Resources\Templates\BtnTemplate1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Frame2.xaml.cs">
+    <Compile Update="Views\Pages\Frame1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Frame3.xaml.cs">
+    <Compile Update="Views\Pages\Frame2.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Frame4.xaml.cs">
+    <Compile Update="Views\Pages\Frame3.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Pages\Frame4.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Frame1.xaml">
+    <Page Update="Resources\Styles\MainStyles.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Frame2.xaml">
+    <Page Update="Resources\Templates\BtnTemplate1.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Frame3.xaml">
+    <Page Update="Views\Pages\Frame1.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Frame4.xaml">
+    <Page Update="Views\Pages\Frame2.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MainWindow.xaml">
+    <Page Update="Views\Pages\Frame3.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Pages\Frame4.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Windows\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

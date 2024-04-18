@@ -1,0 +1,81 @@
+﻿<Page x:Class="IWT_RED.Frame2"
+      x:Name="Page2"
+      
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:IWT_RED"
+        mc:Ignorable="d"
+        Title="Innovative Weapons Technologies" 
+        MinHeight="1080"
+        MinWidth="1920" d:DesignHeight="1092" d:DesignWidth="1920">
+
+
+    
+
+
+
+
+    <Grid Name="Grid" Background="Black" >
+
+        <Grid.RowDefinitions>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="682"></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Image  HorizontalAlignment="Left"   Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Source="/Resources/Images/Frame2.png"/>
+
+        <StackPanel Width="693" Height="841" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1">
+            
+            <Border MinHeight="100">
+                <TextBlock FontStyle="Italic" FontSize="42" HorizontalAlignment="Center" TextAlignment="Center" Foreground="White" FontWeight="Bold">ХОТИТЕ ПОСМОТРЕТЬ <LineBreak/> КАТАЛОГ ПРОДУКЦИИ?</TextBlock>
+            </Border>
+            
+            <Border MinHeight="120">
+                <TextBlock FontSize="28" Foreground="Gray" TextAlignment="Center">Заполните форму и мы вышлем <LineBreak/> вам его на электронную почту</TextBlock>
+            </Border>
+
+
+
+            <Border Style="{DynamicResource BorderForBRTB}">
+                <Grid>
+                    <TextBox x:Name="TB1" TextChanged="txtChng" Style="{DynamicResource BorderForTB}"/>
+                    <TextBlock Name="placeHolder1" Style="{DynamicResource BorderForTBl}">Фамилия, имя, отчество</TextBlock>
+                </Grid>
+            </Border>
+
+
+
+            <Border Style="{DynamicResource BorderForBRTB}">
+
+                <Grid>
+                    <TextBox TextChanged="txtChng" x:Name="TB2" Style="{DynamicResource BorderForTB}"/>
+                    <TextBlock Name="placeHolder2" Style="{DynamicResource BorderForTBl}">Ваш телефон</TextBlock>
+                </Grid>
+            </Border>
+
+
+
+            <Border Style="{DynamicResource BorderForBRTB}">
+                <Grid>
+                    <TextBox TextChanged="txtChng" x:Name="TB3" Style="{DynamicResource BorderForTB}"/>
+                    <TextBlock Name="placeHolder3" Style="{DynamicResource BorderForTBl}">E-mail</TextBlock>
+                </Grid>
+            </Border>
+            
+            <Border MinHeight="100">
+                <TextBlock FontFamily="Montserrat" VerticalAlignment="Center" FontStyle="Italic" FontSize="18" Foreground="Gray"> Я даю согласие на обработку персональных данных и соглашаюсь <LineBreak/> с политикой конфиденциальности.</TextBlock>
+            </Border>
+
+
+
+            <Button Name="button" Click="GoToFrame3" Style="{ DynamicResource bt1Style}" />
+        </StackPanel>
+
+
+    </Grid>
+</Page>

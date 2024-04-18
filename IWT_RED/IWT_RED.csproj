@@ -20,15 +20,23 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="ForCode.png" />
-    <Resource Include="Frame1.png" />
-    <Resource Include="Frame11.png" />
-    <Resource Include="Frame12.png" />
-    <Resource Include="Frame2.png" />
-    <Resource Include="Frame3.png" />
-    <Resource Include="Frame4.png" />
-    <Resource Include="QR_IWT.png" />
-    <Resource Include="QR_RED.png" />
+    <Resource Include="Resources\Images\ForCode.png" />
+    <Resource Include="Resources\Images\Frame1.png" />
+    <Resource Include="Resources\Images\Frame11.png" />
+    <Resource Include="Resources\Images\Frame12.png" />
+    <Resource Include="Resources\Images\Frame2.png" />
+    <Resource Include="Resources\Images\Frame3.png" />
+    <Resource Include="Resources\Images\Frame4.png" />
+    <Resource Include="Resources\Images\QR_IWT.png" />
+    <Resource Include="Resources\Images\QR_RED.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+    <Folder Include="Libs\" />
+    <Folder Include="Models\" />
+    <Folder Include="Utilities\" />
+    <Folder Include="ViewModels\" />
   </ItemGroup>
 
 </Project>
