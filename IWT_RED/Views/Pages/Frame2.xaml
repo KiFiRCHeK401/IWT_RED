@@ -5,46 +5,90 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:IWT_RED"
+      xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        xmlns:local="clr-namespace:IWT_RED" 
+        xmlns:utilites="clr-namespace:IWT_RED.Utilites" 
+        xmlns:viewModels="clr-namespace:IWT_RED.ViewModels"
+        xmlns:visualBasic="clr-namespace:Microsoft.VisualBasic;assembly=Microsoft.VisualBasic.Core"
         mc:Ignorable="d"
         Title="Innovative Weapons Technologies" 
         MinHeight="1080"
         MinWidth="1920" d:DesignHeight="1092" d:DesignWidth="1920">
 
 
-    
+    <Page.DataContext>
+        <viewModels:ViewModelFrame2Commands/>
+    </Page.DataContext>
+    <Grid Name="Grid"
+          Background="Black" >
 
-
-
-
-    <Grid Name="Grid" Background="Black" >
-
-        <Grid.RowDefinitions>
-
-        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="682"></ColumnDefinition>
             <ColumnDefinition ></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Image  HorizontalAlignment="Left"   Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Source="/Resources/Images/Frame2.png"/>
+        <Image  HorizontalAlignment="Left"   
+                Grid.Column="0" 
+                Grid.Row="0" 
+                Source="/Resources/Images/Frame2.png"/>
 
-        <StackPanel Width="693" Height="841" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1">
+        <StackPanel Width="693" 
+                    Height="841" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    Grid.Column="1">
             
             <Border MinHeight="100">
-                <TextBlock FontStyle="Italic" FontSize="42" HorizontalAlignment="Center" TextAlignment="Center" Foreground="White" FontWeight="Bold">ХОТИТЕ ПОСМОТРЕТЬ <LineBreak/> КАТАЛОГ ПРОДУКЦИИ?</TextBlock>
+                <TextBlock FontStyle="Italic" 
+                           FontSize="42" 
+                           HorizontalAlignment="Center" 
+                           TextAlignment="Center" 
+                           Foreground="White" 
+                           FontWeight="Bold">
+                    ХОТИТЕ ПОСМОТРЕТЬ <LineBreak/> КАТАЛОГ ПРОДУКЦИИ?
+
+                </TextBlock>
             </Border>
             
             <Border MinHeight="120">
-                <TextBlock FontSize="28" Foreground="Gray" TextAlignment="Center">Заполните форму и мы вышлем <LineBreak/> вам его на электронную почту</TextBlock>
+                <TextBlock FontSize="28" 
+                           Foreground="Gray" 
+                           TextAlignment="Center">
+                    Заполните форму и мы вышлем <LineBreak/> вам его на электронную почту
+
+                </TextBlock>
             </Border>
 
 
 
             <Border Style="{DynamicResource BorderForBRTB}">
                 <Grid>
-                    <TextBox x:Name="TB1" TextChanged="txtChng" Style="{DynamicResource BorderForTB}"/>
-                    <TextBlock Name="placeHolder1" Style="{DynamicResource BorderForTBl}">Фамилия, имя, отчество</TextBlock>
+                    <TextBox  x:Name="TB1" 
+                        
+                        Style="{DynamicResource BorderForTB}">
+                        
+                    </TextBox>
+                    <TextBlock Name="placeHolder1" >
+                        Фамилия, имя, отчество
+
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock" Style.BasedOn="{StaticResource BorderForTBl}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding ="{Binding ElementName=TB1, Path=Text}"
+                                                 Value="{x:Null}">
+                                        <Setter Property="Visibility" Value="Visible"></Setter>
+
+                                    </DataTrigger>
+                                    <DataTrigger Binding ="{Binding ElementName=TB1, Path=Text}"
+                                                 Value="">
+                                        <Setter Property="Visibility" Value="Visible"></Setter>
+                                        
+                                    </DataTrigger>
+
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
                 </Grid>
             </Border>
 
@@ -53,8 +97,30 @@
             <Border Style="{DynamicResource BorderForBRTB}">
 
                 <Grid>
-                    <TextBox TextChanged="txtChng" x:Name="TB2" Style="{DynamicResource BorderForTB}"/>
-                    <TextBlock Name="placeHolder2" Style="{DynamicResource BorderForTBl}">Ваш телефон</TextBlock>
+                    <TextBox x:Name="TB2" 
+                             Style="{DynamicResource BorderForTB}"/>
+                    
+                    
+                    <TextBlock Name="placeHolder2">
+                        Ваш телефон
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock" Style.BasedOn="{StaticResource BorderForTBl}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding ="{Binding ElementName=TB2, Path=Text}"
+                                                 Value="{x:Null}">
+                                        <Setter Property="Visibility" Value="Visible"></Setter>
+
+                                    </DataTrigger>
+                                    <DataTrigger Binding ="{Binding ElementName=TB2, Path=Text}"
+                                                 Value="">
+                                        <Setter Property="Visibility" Value="Visible"></Setter>
+
+                                    </DataTrigger>
+
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
                 </Grid>
             </Border>
 
@@ -62,18 +128,48 @@
 
             <Border Style="{DynamicResource BorderForBRTB}">
                 <Grid>
-                    <TextBox TextChanged="txtChng" x:Name="TB3" Style="{DynamicResource BorderForTB}"/>
-                    <TextBlock Name="placeHolder3" Style="{DynamicResource BorderForTBl}">E-mail</TextBlock>
+                    <TextBox x:Name="TB3" 
+                             Style="{DynamicResource BorderForTB}"/>
+                    <TextBlock Name="placeHolder3">
+                        E-mail
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock" Style.BasedOn="{StaticResource BorderForTBl}">
+                                <Style.Triggers>
+                                    <DataTrigger Binding ="{Binding ElementName=TB3, Path=Text}"
+                                                 Value="{x:Null}">
+                                        <Setter Property="Visibility" Value="Visible"></Setter>
+
+                                    </DataTrigger>
+                                    <DataTrigger Binding ="{Binding ElementName=TB3, Path=Text}"
+                                                 Value="">
+                                        <Setter Property="Visibility" Value="Visible"></Setter>
+
+                                    </DataTrigger>
+
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
                 </Grid>
             </Border>
             
             <Border MinHeight="100">
-                <TextBlock FontFamily="Montserrat" VerticalAlignment="Center" FontStyle="Italic" FontSize="18" Foreground="Gray"> Я даю согласие на обработку персональных данных и соглашаюсь <LineBreak/> с политикой конфиденциальности.</TextBlock>
+                <TextBlock FontFamily="Montserrat" 
+                           VerticalAlignment="Center" 
+                           FontStyle="Italic" 
+                           FontSize="18" 
+                           Foreground="Gray">
+                     Я даю согласие на обработку персональных данных и соглашаюсь <LineBreak/> с политикой конфиденциальности.
+
+                </TextBlock>
             </Border>
 
 
 
-            <Button Name="button" Click="GoToFrame3" Style="{ DynamicResource bt1Style}" />
+            <Button Name="button1" 
+                    Style="{ DynamicResource bt1Style}" 
+                    Content="Подтвердить" 
+                    Command="{Binding AcceptFrame2Com}"/>
         </StackPanel>
 
 

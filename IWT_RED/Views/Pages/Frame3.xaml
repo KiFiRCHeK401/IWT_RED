@@ -3,52 +3,125 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    xmlns:local="clr-namespace:IWT_RED"
+    xmlns:local="clr-namespace:IWT_RED" 
+    xmlns:viewModels="clr-namespace:IWT_RED.ViewModels"
     mc:Ignorable="d"
     Title="Innovative Weapons Technologies" 
     MinHeight="1080"
     MinWidth="1920" d:DesignHeight="1092" d:DesignWidth="1920">
 
-    <Grid Name="Grid" Background="Black" Keyboard.KeyDown="keyDown">
+    <Page.DataContext>
+        <!--подключение ViewModel-->
+        <viewModels:ViewModelFrame3Commands/>
+    </Page.DataContext>
 
-        <Grid.RowDefinitions>
 
-        </Grid.RowDefinitions>
+    <Grid Name="Grid" 
+          Background="Black" >
+
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition ></ColumnDefinition>
             <ColumnDefinition Width="682"></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Image  HorizontalAlignment="Right"   Grid.Column="1" Grid.Row="0" Grid.RowSpan="3" Source="/Resources/Images/Frame3.png"/>
+        <Image  HorizontalAlignment="Right"   
+                Grid.Column="1" 
+                Grid.Row="0" 
+                Grid.RowSpan="3" 
+                Source="/Resources/Images/Frame3.png"/>
 
-        <StackPanel Width="693" Height="719" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0">
+        <StackPanel Width="693" 
+                    Height="719" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    Grid.Column="0">
 
             <Border MinHeight="100">
-                <TextBlock FontStyle="Italic" FontSize="42" HorizontalAlignment="Center" TextAlignment="Center" Foreground="White" FontWeight="Bold">
+                <TextBlock FontStyle="Italic" 
+                           FontSize="42" 
+                           HorizontalAlignment="Center" 
+                           TextAlignment="Center" 
+                           Foreground="White" 
+                           FontWeight="Bold">
                     ПОДТВЕРДИТЕ <LineBreak/> УКАЗАННЫЙ НОМЕР <LineBreak/> ТЕЛЕФОНА
                 </TextBlock>
             </Border>
 
             <Border MinHeight="120">
-                <TextBlock VerticalAlignment="Center" FontSize="28" Foreground="Gray" TextAlignment="Center">
+                <TextBlock VerticalAlignment="Center" 
+                           FontSize="28" 
+                           Foreground="Gray" 
+                           TextAlignment="Center">
                     Введите код из СМС
                 </TextBlock>
             </Border>
 
             <DockPanel MinHeight="240" >
-                <DockPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-                    <Border Height="141"  Width="90" Margin="2,2,2,2" BorderBrush="Gray"  BorderThickness="2" >
-                        <TextBox Background="Transparent"  TextChanged="TextChanged1" FontSize="141" FontFamily="Montserrat" Foreground="Gray" TextAlignment="Left" VerticalAlignment="Center" x:Name="TB4" Height="141"  Width="90" BorderBrush="Black" MaxLength="1">
+                <DockPanel HorizontalAlignment="Center" 
+                           VerticalAlignment="Center">
+                    <Border Height="141"  
+                            Width="90" 
+                            Margin="2,2,2,2" 
+                            BorderBrush="Gray"  
+                            BorderThickness="2" >
+                        <TextBox Background="Transparent"  
+                                 FontSize="141" 
+                                 FontFamily="Montserrat" 
+                                 Foreground="Gray" 
+                                 TextAlignment="Left" 
+                                 VerticalAlignment="Center" 
+                                 x:Name="TB4" 
+                                 Height="141"  
+                                 Width="90" 
+                                 BorderBrush="Black" 
+                                 MaxLength="1"
+                                 Text="{Binding TB4Text}">
                         </TextBox>
                     </Border>
 
-                    <Border Height="141"  Width="90" Margin="2,2,2,2" BorderBrush="Gray"  BorderThickness="2">
-                        <TextBox Background="Transparent"  TextChanged="TextChanged2" FontSize="141" FontFamily="Montserrat" Foreground="Gray" TextAlignment="Left" VerticalAlignment="Center" x:Name="TB5" Height="141"  Width="90" BorderBrush="Black" MaxLength="1">
+                    <Border Height="141"  
+                            Width="90" 
+                            Margin="2,2,2,2" 
+                            BorderBrush="Gray"  
+                            BorderThickness="2">
+                        <TextBox Background="Transparent"  
+                                 FontSize="141" 
+                                 FontFamily="Montserrat" 
+                                 Foreground="Gray" 
+                                 TextAlignment="Left" 
+                                 VerticalAlignment="Center" 
+                                 x:Name="TB5" 
+                                 Height="141"  
+                                 Width="90" 
+                                 BorderBrush="Black" 
+                                 MaxLength="1"
+                                 Text="{Binding TB5Text}">
+
                         </TextBox>
                     </Border>
 
-                    <Border Height="141"  Width="90" Margin="2,2,2,2" BorderBrush="Gray"  BorderThickness="2">
-                        <TextBox Background="Transparent"  TextChanged="TextChanged3" FontSize="141" FontFamily="Montserrat" Foreground="Gray" TextAlignment="Left" VerticalAlignment="Center" x:Name="TB6" Height="141"  Width="90" BorderBrush="Black" MaxLength="1">
+                    <Border Height="141"  
+                            Width="90" 
+                            Margin="2,2,2,2" 
+                            BorderBrush="Gray"  
+                            BorderThickness="2">
+                        <TextBox Background="Transparent"  
+                                 FontSize="141" 
+                                 FontFamily="Montserrat" 
+                                 Foreground="Gray" 
+                                 TextAlignment="Left" 
+                                 VerticalAlignment="Center" 
+                                 x:Name="TB6" 
+                                 Height="141"  
+                                 Width="90" 
+                                 BorderBrush="Black" 
+                                 MaxLength="1"
+                                 Text="{Binding TB6Text}"
+                                 >
+
+
+
                         </TextBox>
                     </Border>
                 </DockPanel>
@@ -57,9 +130,26 @@
             </DockPanel>
 
 
-            <Button Click="AcceptFrame3" Panel.ZIndex="4" Content="Подтвердить номер"  Style="{ DynamicResource bt1Style}" />
-            <Border VerticalAlignment="Bottom" MinHeight="100">
-                <TextBlock Mouse.MouseDown="GetCodeAgane" FontFamily="Montserrat" VerticalAlignment="Center" TextDecorations="Underline"  FontSize="28" Foreground="Gray" TextAlignment="Center">Прислать код повторно</TextBlock>
+            <Button Panel.ZIndex="4" 
+                    Content="Подтвердить номер"  
+                    Style="{ DynamicResource bt1Style}" 
+                    Command="{Binding VerificationCode}"
+                    Name="Btn">
+
+            </Button>
+            <Border VerticalAlignment="Bottom" 
+                    MinHeight="100">
+                <TextBlock FontFamily="Montserrat" 
+                           VerticalAlignment="Center" 
+                           TextDecorations="Underline"  
+                           FontSize="28" 
+                           Foreground="Gray" 
+                           TextAlignment="Center">
+                    Прислать код повторно
+                    <TextBlock.InputBindings>
+                        <MouseBinding MouseAction="LeftClick" Command="{Binding GetCodeAgain}"/>
+                    </TextBlock.InputBindings>
+                </TextBlock>
             </Border>
         </StackPanel>
 

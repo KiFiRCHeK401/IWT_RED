@@ -11,34 +11,72 @@
 
     <Grid Name="Grid" Background="Black" >
 
-        <Grid.RowDefinitions>
-
-        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="682"></ColumnDefinition>
             <ColumnDefinition ></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Image   HorizontalAlignment="Left" Margin="0,0,0,0"    Grid.Column="0" Grid.Row="0" Grid.RowSpan="3" Source="/Resources/Images/Frame4.png"/>
+        <Image   HorizontalAlignment="Left" 
+                 Margin="0,0,0,0"    
+                 Grid.Column="0" Grid.Row="0" 
 
-        <StackPanel Width="693" Height="660" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1">
+                 Source="/Resources/Images/Frame4.png"/>
+
+        <StackPanel Width="693" 
+                    Height="660" 
+                    HorizontalAlignment="Center" 
+                    VerticalAlignment="Center" 
+                    Grid.Column="1">
 
             <Border MinHeight="130">
-                <TextBlock FontStyle="Italic" FontSize="42" HorizontalAlignment="Center" TextAlignment="Center" Foreground="White" FontWeight="Bold">ФАЙЛ УСПЕШНО <LineBreak/> ОТПРАВЛЕН</TextBlock>
+                <TextBlock FontStyle="Italic" 
+                           FontSize="42" 
+                           HorizontalAlignment="Center" 
+                           TextAlignment="Center" 
+                           Foreground="White" 
+                           FontWeight="Bold">
+                    ФАЙЛ УСПЕШНО <LineBreak/> ОТПРАВЛЕН
+                </TextBlock>
             </Border>
 
             <Border MinHeight="190">
-                <TextBlock FontSize="28" Foreground="Gray" TextAlignment="Center">Так же вы можете скачать каталог себе на <LineBreak/> телефон, отсканировав этот QR-код</TextBlock>
+                <TextBlock FontSize="28" 
+                           Foreground="Gray" 
+                           TextAlignment="Center">
+                    Так же вы можете скачать каталог себе на <LineBreak/> телефон, отсканировав этот QR-код
+                </TextBlock>
             </Border>
 
-            <Grid HorizontalAlignment="Center" Width="651" MinHeight="330">
+            <Grid HorizontalAlignment="Center" 
+                  Width="651" 
+                  MinHeight="330">
                 <Grid HorizontalAlignment="Left">
-                    <Image VerticalAlignment="Top" Width="288" Height="288"  HorizontalAlignment="left" Source="/Resources/Images/QR_IWT.png"  />
-                    <TextBlock VerticalAlignment="Bottom" TextAlignment="Center" HorizontalAlignment="Center" Foreground="Gray" FontSize="28">  IWT</TextBlock>
+                    <Image VerticalAlignment="Top" 
+                           Width="288" 
+                           Height="288"  
+                           HorizontalAlignment="left" 
+                           Source="/Resources/Images/QR_IWT.png"  />
+                    <TextBlock VerticalAlignment="Bottom" 
+                               TextAlignment="Center" 
+                               HorizontalAlignment="Center" 
+                               Foreground="Gray" 
+                               FontSize="28">
+                        IWT
+                    </TextBlock>
                 </Grid>
                 <Grid HorizontalAlignment="Right">
-                    <Image VerticalAlignment="Top" Width="288" Height="288"  HorizontalAlignment="Right" Source="/Resources/Images/QR_RED.png"  />
-                    <TextBlock VerticalAlignment="Bottom" TextAlignment="Center" HorizontalAlignment="Center" Foreground="Gray" FontSize="28">  RED</TextBlock>
+                    <Image VerticalAlignment="Top" 
+                           Width="288" 
+                           Height="288"  
+                           HorizontalAlignment="Right" 
+                           Source="/Resources/Images/QR_RED.png"/>
+                    <TextBlock VerticalAlignment="Bottom" 
+                               TextAlignment="Center" 
+                               HorizontalAlignment="Center" 
+                               Foreground="Gray" 
+                               FontSize="28">
+                        RED
+                    </TextBlock>
                 </Grid>
                 
             </Grid>

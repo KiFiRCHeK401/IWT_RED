@@ -7,9 +7,6 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Resources\Templates\BtnTemplate1.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Views\Pages\Frame1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -27,7 +24,7 @@
     <Page Update="Resources\Styles\MainStyles.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Resources\Templates\BtnTemplate1.xaml">
+    <Page Update="Resources\Templates\Template.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Pages\Frame1.xaml">

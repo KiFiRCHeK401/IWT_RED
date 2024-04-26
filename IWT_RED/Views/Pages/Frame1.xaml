@@ -3,14 +3,25 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:IWT_RED"
+        xmlns:local="clr-namespace:IWT_RED" 
+        xmlns:viewModels="clr-namespace:IWT_RED.ViewModels"
         mc:Ignorable="d"
         Title="Innovative Weapons Technologies" 
 
         MinHeight="1080"
         MinWidth="1920" d:DesignHeight="1092" d:DesignWidth="1920">
-    
-    <Grid Name="Grid" Background="Black" Mouse.MouseDown="ClickOnFrame1">
+
+    <Page.DataContext> <!--подключение ViewModel-->
+        <viewModels:ViewModelFrame1Commands/>
+    </Page.DataContext>
+
+    <Grid Name="Grid" 
+          Background="Black" 
+          >
+
+        <Grid.InputBindings>
+            <MouseBinding MouseAction="LeftClick" Command="{Binding GoToFrame2}"/>
+        </Grid.InputBindings>
         
         <Grid.RowDefinitions>
             <RowDefinition Height="287"></RowDefinition>
@@ -23,21 +34,61 @@
             <ColumnDefinition></ColumnDefinition>
         </Grid.ColumnDefinitions>
 
-        <Image Source="/Resources/Images/Frame1.png" VerticalAlignment="Bottom" HorizontalAlignment="Center"  Margin="0,220,0,40" Grid.Column="1" Grid.Row="2"/>
+        <Image Source="/Resources/Images/Frame1.png" 
+               VerticalAlignment="Bottom" 
+               HorizontalAlignment="Center" 
+               Margin="0,220,0,40" 
+               Grid.Column="1" 
+               Grid.Row="2"/>
 
 
-        <Image Source="/Resources/Images/Frame11.png" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="0,100,0,40" Grid.Column="0" Grid.Row="0" Grid.RowSpan="3"  />
+        <Image Source="/Resources/Images/Frame11.png" 
+               VerticalAlignment="Center" 
+               HorizontalAlignment="Left" 
+               Margin="0,100,0,40" 
+               Grid.Column="0" 
+               Grid.Row="0" 
+               Grid.RowSpan="3"  />
 
 
-        <Image Source="/Resources/Images/Frame12.png" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,100,0,40" Grid.Column="2" Grid.Row="0" Grid.RowSpan="3"  />
+        <Image Source="/Resources/Images/Frame12.png" 
+               VerticalAlignment="Center" 
+               HorizontalAlignment="Right" 
+               Margin="0,100,0,40" 
+               Grid.Column="2" 
+               Grid.Row="0" 
+               Grid.RowSpan="3"  />
 
-        <Border Name="Grid1"  Grid.Column="1" Grid.Row="2" VerticalAlignment="Top" Width="700" BorderBrush="Gray"  BorderThickness="4" CornerRadius="100" Padding="5" Height="200">
-            <TextBlock Foreground="Gray" FontSize="60" HorizontalAlignment="Center" VerticalAlignment="Center" TextAlignment="Center" > 
+        <Border Name="Grid1"  
+                Grid.Column="1" 
+                Grid.Row="2" 
+                VerticalAlignment="Top" 
+                Width="700" 
+                BorderBrush="Gray"  
+                BorderThickness="4" 
+                CornerRadius="100" 
+                Padding="5" 
+                Height="200">
+
+            <TextBlock 
+                Foreground="Gray" 
+                FontSize="60" 
+                HorizontalAlignment="Center" 
+                VerticalAlignment="Center" 
+                TextAlignment="Center" > 
                 Нажмите на экран,<LineBreak></LineBreak> чтобы продолжить
+
             </TextBlock>
         </Border>
-        <TextBlock Grid.Column="1" Grid.Row="1" Foreground="White"   FontStyle="Italic" FontWeight="Bold" FontSize="83.49" TextAlignment="Center" > 
+        <TextBlock Grid.Column="1" 
+                   Grid.Row="1" 
+                   Foreground="White"   
+                   FontStyle="Italic" 
+                   FontWeight="Bold" 
+                   FontSize="83.49" 
+                   TextAlignment="Center" >
             ИННОВАЦИОННЫЕ<LineBreak />ОРУЖЕЙНЫЕ<LineBreak /> ТЕХНОЛОГИИ
+
         </TextBlock>
 
     </Grid>

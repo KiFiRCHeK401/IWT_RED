@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using IWT_RED.Helpers;
 
 namespace IWT_RED
 {
@@ -23,6 +24,9 @@ namespace IWT_RED
         public MainWindow()
         {
             InitializeComponent();
+            Navigate.NavServ = frame.NavigationService;
+
+
 
             frame.Navigate(new Frame1());
             

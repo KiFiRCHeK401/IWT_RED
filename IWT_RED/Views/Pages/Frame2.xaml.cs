@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,7 @@ using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using IWT_RED.Utilites;
 
 namespace IWT_RED
 {
@@ -21,63 +23,12 @@ namespace IWT_RED
     /// </summary>
     public partial class Frame2 : Page
     {
+
+
         public Frame2()
         {
             InitializeComponent();
-            
         }
 
-        private void txtChng(object sender, RoutedEventArgs e)
-        {
-            if (TB1.Text == "")
-            {
-                placeHolder1.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                placeHolder1.Visibility = Visibility.Hidden;
-            }
-            if (TB2.Text == "")
-            {
-                placeHolder2.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                placeHolder2.Visibility = Visibility.Hidden;
-            }
-            if (TB3.Text == "")
-            {
-                placeHolder3.Visibility = Visibility.Visible;
-            }
-            else
-            {
-                placeHolder3.Visibility = Visibility.Hidden;
-            }
-
-        }
-
-        private void focusOn(object sender, RoutedEventArgs e)
-        {
-
-            ColorAnimation buttonAnimation = new ColorAnimation();
-            buttonAnimation.From = Color.FromRgb(251, 185, 17);
-            buttonAnimation.To = Color.FromRgb(210, 150, 13);
-            buttonAnimation.Duration = TimeSpan.FromSeconds(0.2);
-            button.Background.BeginAnimation(SolidColorBrush.ColorProperty, buttonAnimation);
-        }
-        private void focusOut(object sender, RoutedEventArgs e)
-        {
-
-            ColorAnimation buttonAnimation = new ColorAnimation();
-            buttonAnimation.From = Color.FromRgb(210, 150, 13);
-            buttonAnimation.To = Color.FromRgb(251, 185, 17);
-            buttonAnimation.Duration = TimeSpan.FromSeconds(0.2);
-            button.Background.BeginAnimation(SolidColorBrush.ColorProperty, buttonAnimation);
-        }
-
-        private void GoToFrame3(object sender, RoutedEventArgs e)
-        {
-            this.NavigationService.Navigate(new Frame3());
-        }
     }
 }

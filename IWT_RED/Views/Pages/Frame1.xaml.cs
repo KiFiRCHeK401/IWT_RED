@@ -26,11 +26,6 @@ namespace IWT_RED
 
         }
 
-        private void ClickOnFrame1(object sender, MouseButtonEventArgs e)
-        {
-            
-            this.NavigationService.Navigate(new Frame2());
-        }
 
         
     }

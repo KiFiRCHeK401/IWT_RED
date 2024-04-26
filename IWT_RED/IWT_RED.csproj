@@ -8,6 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Utilities\**" />
+    <EmbeddedResource Remove="Utilities\**" />
+    <None Remove="Utilities\**" />
+    <Page Remove="Utilities\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="ForCode.png" />
     <None Remove="Frame1.png" />
     <None Remove="Frame11.png" />
@@ -32,11 +39,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Helpers\" />
     <Folder Include="Libs\" />
     <Folder Include="Models\" />
-    <Folder Include="Utilities\" />
-    <Folder Include="ViewModels\" />
   </ItemGroup>
 
 </Project>

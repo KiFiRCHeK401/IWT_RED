@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using IWT_RED.Helpers;
 
 namespace IWT_RED
 {
@@ -40,7 +41,8 @@ namespace IWT_RED
         void timer_Tick(object sender, EventArgs e)
         {
             timer.Stop();
-            this.NavigationService.Navigate(new Frame1());
+
+            Navigate.NavServ.Navigate(new Frame1());
         }
     }
 }
