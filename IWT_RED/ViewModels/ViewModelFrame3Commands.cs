@@ -5,6 +5,8 @@ using System.Runtime.CompilerServices;
 using System.Windows;
 using System.Windows.Controls;
 using IWT_RED.Helpers;
+using System.Windows.Threading;
+using System;
 
 namespace IWT_RED.ViewModels
 {
@@ -45,6 +47,7 @@ namespace IWT_RED.ViewModels
                     if (CorrCode == EntrCode)
                     {
                         Navigate.NavServ.Navigate(new Frame4());
+                        timerStart();
                     }
                     else
                     {
@@ -82,6 +85,26 @@ namespace IWT_RED.ViewModels
             }
         }
 
+
+
+
+        DispatcherTimer timer = new DispatcherTimer();
+
+
+
+        private void timerStart()
+        {
+
+            timer.Interval = TimeSpan.FromSeconds(20);
+            timer.Tick += timer_Tick;
+            timer.Start();
+        }
+        void timer_Tick(object sender, EventArgs e)
+        {
+            timer.Stop();
+
+            Navigate.NavServ.Navigate(new Frame1());
+        }
 
 
 

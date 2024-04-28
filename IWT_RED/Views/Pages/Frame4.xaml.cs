@@ -21,28 +21,12 @@ namespace IWT_RED
 
     public partial class Frame4 : Page
     {
-        DispatcherTimer timer = new DispatcherTimer();
-
         public Frame4()
         {
             
             InitializeComponent();
 
-            timerStart();
         }
 
-        private void timerStart()
-        {
-            
-            timer.Interval = TimeSpan.FromSeconds(20);
-            timer.Tick += timer_Tick;
-            timer.Start();
-        }
-        void timer_Tick(object sender, EventArgs e)
-        {
-            timer.Stop();
-
-            Navigate.NavServ.Navigate(new Frame1());
-        }
     }
 }
