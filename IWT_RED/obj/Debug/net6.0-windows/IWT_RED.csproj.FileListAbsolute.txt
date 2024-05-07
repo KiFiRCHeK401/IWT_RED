@@ -97,3 +97,5 @@ C:\Users\artur\OneDrive\Save\Documents\Работа\IWT\IWT_RED\IWT_RED\obj\Debu
 C:\Users\artur\OneDrive\Save\Documents\Работа\IWT\IWT_RED\IWT_RED\obj\Debug\net6.0-windows\IWT_RED.pdb
 C:\Users\artur\OneDrive\Save\Documents\Работа\IWT\IWT_RED\IWT_RED\obj\Debug\net6.0-windows\IWT_RED.genruntimeconfig.cache
 C:\Users\artur\OneDrive\Save\Documents\Работа\IWT\IWT_RED\IWT_RED\obj\Debug\net6.0-windows\ref\IWT_RED.dll
+C:\Users\artur\OneDrive\Save\Documents\Работа\IWT\IWT_RED\IWT_RED\obj\Debug\net6.0-windows\UserControls\UserControlTextBox.g.cs
+C:\Users\artur\OneDrive\Save\Documents\Работа\IWT\IWT_RED\IWT_RED\obj\Debug\net6.0-windows\UserControls\UserControlTextBox.baml

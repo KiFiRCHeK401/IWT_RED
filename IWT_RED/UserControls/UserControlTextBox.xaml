@@ -1,0 +1,48 @@
+﻿<UserControl x:Class="IWT_RED.UserControlTextBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:IWT_RED"
+             mc:Ignorable="d" >
+
+
+   <StackPanel>
+        <Border Style="{DynamicResource BorderForBRTB}">
+            <Grid>
+                <TextBox  x:Name="TB1" 
+          
+                   Style="{DynamicResource BorderForTB}">
+
+                </TextBox>
+                <TextBlock Name="placeHolder1" 
+                           Text="{Binding TextForPlaceHolder}">
+
+
+                    <TextBlock.Style>
+                        <Style TargetType="TextBlock" Style.BasedOn="{StaticResource BorderForTBl}">
+                            <Style.Triggers>
+                                <DataTrigger Binding ="{Binding ElementName=TB1, Path=Text}"
+                                             Value="{x:Null}">
+                                    <Setter Property="Visibility" Value="Visible"></Setter>
+
+                                </DataTrigger>
+                                <DataTrigger Binding ="{Binding ElementName=TB1, Path=Text}"
+                                             Value="">
+                                    <Setter Property="Visibility" Value="Visible"></Setter>
+
+                                </DataTrigger>
+
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+                </TextBlock>
+            </Grid>
+        </Border>
+        
+    </StackPanel>
+
+
+
+
+</UserControl>

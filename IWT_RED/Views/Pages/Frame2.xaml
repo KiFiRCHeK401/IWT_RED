@@ -61,98 +61,12 @@
 
 
 
-            <Border Style="{DynamicResource BorderForBRTB}">
-                <Grid>
-                    <TextBox  x:Name="TB1" 
-                        
-                        Style="{DynamicResource BorderForTB}">
-                        
-                    </TextBox>
-                    <TextBlock Name="placeHolder1" >
-                        Фамилия, имя, отчество
-
-                        <TextBlock.Style>
-                            <Style TargetType="TextBlock" Style.BasedOn="{StaticResource BorderForTBl}">
-                                <Style.Triggers>
-                                    <DataTrigger Binding ="{Binding ElementName=TB1, Path=Text}"
-                                                 Value="{x:Null}">
-                                        <Setter Property="Visibility" Value="Visible"></Setter>
-
-                                    </DataTrigger>
-                                    <DataTrigger Binding ="{Binding ElementName=TB1, Path=Text}"
-                                                 Value="">
-                                        <Setter Property="Visibility" Value="Visible"></Setter>
-                                        
-                                    </DataTrigger>
-
-                                </Style.Triggers>
-                            </Style>
-                        </TextBlock.Style>
-                    </TextBlock>
-                </Grid>
-            </Border>
 
 
+            <local:UserControlTextBox x:Name ="TestUserControl1" TextForPlaceHolder="Фамилия, имя, отчество"/>
+            <local:UserControlTextBox x:Name ="TestUserControl2" TextForPlaceHolder="e-mail"/>
+            <local:UserControlTextBox x:Name ="TestUserControl3" TextForPlaceHolder="Телефон"/>
 
-            <Border Style="{DynamicResource BorderForBRTB}">
-
-                <Grid>
-                    <TextBox x:Name="TB2" 
-                             Style="{DynamicResource BorderForTB}"/>
-                    
-                    
-                    <TextBlock Name="placeHolder2">
-                        Ваш телефон
-                        <TextBlock.Style>
-                            <Style TargetType="TextBlock" Style.BasedOn="{StaticResource BorderForTBl}">
-                                <Style.Triggers>
-                                    <DataTrigger Binding ="{Binding ElementName=TB2, Path=Text}"
-                                                 Value="{x:Null}">
-                                        <Setter Property="Visibility" Value="Visible"></Setter>
-
-                                    </DataTrigger>
-                                    <DataTrigger Binding ="{Binding ElementName=TB2, Path=Text}"
-                                                 Value="">
-                                        <Setter Property="Visibility" Value="Visible"></Setter>
-
-                                    </DataTrigger>
-
-                                </Style.Triggers>
-                            </Style>
-                        </TextBlock.Style>
-                    </TextBlock>
-                </Grid>
-            </Border>
-
-
-
-            <Border Style="{DynamicResource BorderForBRTB}">
-                <Grid>
-                    <TextBox x:Name="TB3" 
-                             Style="{DynamicResource BorderForTB}"/>
-                    <TextBlock Name="placeHolder3">
-                        E-mail
-                        <TextBlock.Style>
-                            <Style TargetType="TextBlock" Style.BasedOn="{StaticResource BorderForTBl}">
-                                <Style.Triggers>
-                                    <DataTrigger Binding ="{Binding ElementName=TB3, Path=Text}"
-                                                 Value="{x:Null}">
-                                        <Setter Property="Visibility" Value="Visible"></Setter>
-
-                                    </DataTrigger>
-                                    <DataTrigger Binding ="{Binding ElementName=TB3, Path=Text}"
-                                                 Value="">
-                                        <Setter Property="Visibility" Value="Visible"></Setter>
-
-                                    </DataTrigger>
-
-                                </Style.Triggers>
-                            </Style>
-                        </TextBlock.Style>
-                    </TextBlock>
-                </Grid>
-            </Border>
-            
             <Border MinHeight="100">
                 <TextBlock FontFamily="Montserrat" 
                            VerticalAlignment="Center" 
